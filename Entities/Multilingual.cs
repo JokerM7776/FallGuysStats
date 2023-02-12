@@ -225,6 +225,9 @@ namespace FallGuysStats {
                             {"settings_fall_guys_shortcut_location", "Fall Guys Shortcut Location"},
                             {"settings_browse", "Browse"},
                             {"settings_auto_launch_fall_guys_on_tracker", "Auto-launch Fall Guys on tracker"},
+                            {"settings_openfiledialog_title", "Locate Fall Guys"},
+                            {"settings_openfiledialog_filename", "FallGuys_client_game.url"},
+                            {"settings_openfiledialog_filter", "URL files (*.url)|*.url"},
                             {"settings_language", "language"},
                             {"settings_save", "Save"},
                             {"settings_cancel", "Cancel"},
@@ -503,6 +506,9 @@ namespace FallGuysStats {
                             {"settings_fall_guys_shortcut_location", "게임 바로가기 경로"},
                             {"settings_browse", "찾아보기"},
                             {"settings_auto_launch_fall_guys_on_tracker", "스탯츠 실행할 때 폴 가이즈 클라이언트도 같이 실행하기"},
+                            {"settings_openfiledialog_title", "Fall Guys Client 바로가기 찾기"},
+                            {"settings_openfiledialog_filename", "Fall Guys Clinet 바로가기"},
+                            {"settings_openfiledialog_filter", "URL files (*.url)|*.url"},
                             {"settings_language", "표시 언어"},
                             {"settings_save", "저장"},
                             {"settings_cancel", "취소"},
@@ -781,6 +787,9 @@ namespace FallGuysStats {
                             {"settings_fall_guys_shortcut_location", "ゲームショートカットパス"},
                             {"settings_browse", "閲覧"},
                             {"settings_auto_launch_fall_guys_on_tracker", "Statsを実行するときにFallGuysも一緒に実行する"},
+                            {"settings_openfiledialog_title", "Locate Fall Guys"},
+                            {"settings_openfiledialog_filename", "FallGuys_client_game.url"},
+                            {"settings_openfiledialog_filter", "URL files (*.url)|*.url"},
                             {"settings_language", "表示言語"},
                             {"settings_save", "保存"},
                             {"settings_cancel", "キャンセル"},
@@ -1059,6 +1068,9 @@ namespace FallGuysStats {
                             {"settings_fall_guys_shortcut_location", "糖豆人安装路径"},
                             {"settings_browse", "浏览"},
                             {"settings_auto_launch_fall_guys_on_tracker", "启动统计器时自动启动游戏"},
+                            {"settings_openfiledialog_title", "定位糖豆人客户端位置"},
+                            {"settings_openfiledialog_filename", "FallGuys_client_game.url"},
+                            {"settings_openfiledialog_filter", "Url 文件 (*.url)|*.url"},
                             {"settings_language", "语言"},
                             {"settings_save", "保存"},
                             {"settings_cancel", "取消"},
@@ -1369,7 +1381,8 @@ namespace FallGuysStats {
                             {"round_thin_ice", "パキパキアイス"},
                             {"round_tiptoefinale_almond", "ヒヤヒヤロードファイナル"},
                         }
-            },{ "chs", new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase) {
+            },
+            { "chs", new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase) {
                             {"round_airtime", "空中竞赛"},
                             {"round_bluejay", "糖豆山世界"},
                             {"round_biggestfan", "大风车转转转"},
@@ -2455,7 +2468,8 @@ namespace FallGuysStats {
                     { "toms_main_show_5_2", "メインショー" },
                     { "toms_show2", "Toms Show 2" },
                 }
-            },{ "chs", new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase) {
+            },
+            { "chs", new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase) {
                      { "collectables_ss2_batch_01", "Collectables Batch 01" },
                      { "collectables_ss2_batch_01_model1", "Collectables Batch 01" },
                      { "collectables_ss2_batch_01_model2", "Debug Lobbies Show" },
