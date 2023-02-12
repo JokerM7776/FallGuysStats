@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Drawing;
 using System.Drawing.Text;
 using System.IO;
@@ -232,7 +232,7 @@ namespace FallGuysStats {
             } else if ((string)this.cboOverlayColor.SelectedItem == $"{Multilingual.GetWord("settings_green")}") {
                 this.CurrentSettings.OverlayColor = 5;
             }
-            
+
             if ((string)this.cboWinsFilter.SelectedItem == $"{Multilingual.GetWord("settings_stats_and_party_filter")}") {
                 this.CurrentSettings.WinsFilter = 0;
             } else if ((string)this.cboWinsFilter.SelectedItem == $"{Multilingual.GetWord("settings_season_stats")}") {
@@ -246,7 +246,7 @@ namespace FallGuysStats {
             } else if ((string)this.cboWinsFilter.SelectedItem == $"{Multilingual.GetWord("settings_session_stats")}") {
                 this.CurrentSettings.WinsFilter = 5;
             }
-            
+
             if ((string)this.cboQualifyFilter.SelectedItem == $"{Multilingual.GetWord("settings_all_time_stats")}") {
                 this.CurrentSettings.QualifyFilter = 0;
             } else if ((string)this.cboQualifyFilter.SelectedItem == $"{Multilingual.GetWord("settings_stats_and_party_filter")}") {
@@ -260,7 +260,7 @@ namespace FallGuysStats {
             } else if ((string)this.cboQualifyFilter.SelectedItem == $"{Multilingual.GetWord("settings_session_stats")}") {
                 this.CurrentSettings.QualifyFilter = 5;
             }
-            
+
             if ((string)this.cboFastestFilter.SelectedItem == $"{Multilingual.GetWord("settings_all_time_stats")}") {
                 this.CurrentSettings.FastestFilter = 0;
             } else if ((string)this.cboFastestFilter.SelectedItem == $"{Multilingual.GetWord("settings_stats_and_party_filter")}") {
@@ -304,11 +304,11 @@ namespace FallGuysStats {
                 this.CurrentSettings.OverlayFontSerialized = fontConverter.ConvertToString(this.lblOverlayFontExample.Font);
             } else {
                 this.CurrentSettings.OverlayFontSerialized = string.Empty;
-                Overlay.DefaultFont = Stats.CurrentLanguage == 0 
+                Overlay.DefaultFont = Stats.CurrentLanguage == 0
                     ? new Font(Overlay.DefaultFontCollection.Families[1], 18, FontStyle.Regular, GraphicsUnit.Pixel)
                     : new Font(Overlay.DefaultFontCollection.Families[0], 18, FontStyle.Regular, GraphicsUnit.Pixel);
             }
-            
+
             this.DialogResult = DialogResult.OK;
             this.Close();
         }
@@ -337,24 +337,23 @@ namespace FallGuysStats {
                         openFile.InitialDirectory = currentExeLocation.Directory.FullName;
                     }*/
                     openFile.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory);
-                    openFile.Filter = "URL files (*.url)|*.url";
-                    openFile.FileName = "Fall Guys Clinet 바로가기";
-                    openFile.Title = "Fall Guys Client 바로가기 찾기";
+                    openFile.Filter = Multilingual.GetWord("settings_openfiledialog_filter");
+                    openFile.FileName = Multilingual.GetWord("settings_openfiledialog_filename");
+                    openFile.Title = Multilingual.GetWord("settings_openfiledialog_title");
 
                     if (openFile.ShowDialog(this).Equals(DialogResult.OK)) {
                         string fileContent = string.Empty;
                         string epicGamesFallGuysApp = "50118b7f954e450f8823df1614b24e80%3A38ec4849ea4f4de6aa7b6fb0f2d278e1%3A0a2d9f6403244d12969e11da6713137b";
-                        FileStream fileStream = new FileStream(openFile.FileName ,FileMode.Open);
-                        using (StreamReader reader = new StreamReader(fileStream))
-                        {
+                        FileStream fileStream = new FileStream(openFile.FileName, FileMode.Open);
+                        using (StreamReader reader = new StreamReader(fileStream)) {
                             fileContent = reader.ReadToEnd();
                         }
-                        
+
                         string[] splitContent = fileContent.Split(Environment.NewLine.ToCharArray(), StringSplitOptions.RemoveEmptyEntries);
                         string workingDir = string.Empty;
                         string url = string.Empty;
                         string iconFile = string.Empty;
-                        
+
                         for (int i = 0; i < splitContent.Length; i++) {
                             if (splitContent[i].ToLower().StartsWith("workingdirectory=")) {
                                 workingDir = splitContent[i].Substring(17);
@@ -408,19 +407,19 @@ namespace FallGuysStats {
                 this.txtLogPath.Location = new Point(95, 15);
                 this.txtLogPath.Size = new Size(670, 17);
                 this.lblLogPathNote.Location = new Point(95, 40);
-                
+
                 this.grpStats.Font = new Font(Font.FontFamily, 12, FontStyle.Regular, GraphicsUnit.Pixel, ((byte)(0)));
                 this.txtPreviousWins.Location = new Point(94, 23);
                 this.lblPreviousWinsNote.Location = new Point(140, 23);
                 this.chkAutoUpdate.Location = new Point(285, 23);
                 this.chkChangeHoopsieLegends.Location = new Point(446, 23);
-                
+
                 this.lblWinsFilter.Location = new Point(400, 28);
                 this.lblQualifyFilter.Location = new Point(390, 64);
                 this.lblFastestFilter.Location = new Point(365, 100);
-                
+
                 this.lblOverlayColor.Location = new Point(429, 173);
-                
+
                 this.txtCycleTimeSeconds.Location = new Point(96, 171);
                 this.lblCycleTimeSecondsTag.Location = new Point(127, 170);
 
@@ -430,19 +429,19 @@ namespace FallGuysStats {
                 this.txtLogPath.Location = new Point(95, 15);
                 this.txtLogPath.Size = new Size(670, 17);
                 this.lblLogPathNote.Location = new Point(95, 40);
-                
+
                 this.grpStats.Font = new Font(Font.FontFamily, 12, FontStyle.Regular, GraphicsUnit.Pixel, ((byte)(0)));
                 this.txtPreviousWins.Location = new Point(94, 23);
                 this.lblPreviousWinsNote.Location = new Point(140, 23);
                 this.chkAutoUpdate.Location = new Point(285, 23);
                 this.chkChangeHoopsieLegends.Location = new Point(446, 23);
-                
+
                 this.lblWinsFilter.Location = new Point(391, 28);
                 this.lblQualifyFilter.Location = new Point(405, 64);
                 this.lblFastestFilter.Location = new Point(367, 100);
-                
+
                 this.lblOverlayColor.Location = new Point(429, 173);
-                
+
                 this.txtCycleTimeSeconds.Location = new Point(83, 171);
                 this.lblCycleTimeSecondsTag.Location = new Point(114, 170);
 
@@ -452,7 +451,7 @@ namespace FallGuysStats {
                 this.txtLogPath.Location = new Point(123, 15);
                 this.txtLogPath.Size = new Size(644, 17);
                 this.lblLogPathNote.Location = new Point(73, 41);
-                
+
                 this.grpStats.Font = new Font(Font.FontFamily, 10.25F, FontStyle.Regular, GraphicsUnit.Pixel, ((byte)(0)));
                 this.txtPreviousWins.Location = new Point(98, 23);
                 this.lblPreviousWinsNote.Location = new Point(140, 23);
@@ -462,9 +461,9 @@ namespace FallGuysStats {
                 this.lblWinsFilter.Location = new Point(355, 28);
                 this.lblQualifyFilter.Location = new Point(355, 64);
                 this.lblFastestFilter.Location = new Point(331, 100);
-                
+
                 this.lblOverlayColor.Location = new Point(359, 173);
-                
+
                 this.txtCycleTimeSeconds.Location = new Point(105, 171);
                 this.lblCycleTimeSecondsTag.Location = new Point(135, 170);
 
