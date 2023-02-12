@@ -470,9 +470,9 @@ namespace FallGuysStats {
                 this.txtGameExeLocation.Location = new Point(163, 22);
                 this.txtGameExeLocation.Size = new Size(518, 20);
             } else if (lang == 3) { // Simplified Chinese
-                this.txtLogPath.Location = new Point(123, 15);
-                this.txtLogPath.Size = new Size(644, 17);
-                this.lblLogPathNote.Location = new Point(73, 41);
+                this.txtLogPath.Location = new Point(98, 15);
+                this.txtLogPath.Size = new Size(669, 17);
+                this.lblLogPathNote.Location = new Point(94, 41);
 
                 this.grpStats.Font = new Font(Font.FontFamily, 10.25F, FontStyle.Regular, GraphicsUnit.Pixel, ((byte)(0)));
                 this.txtPreviousWins.Location = new Point(98, 23);
